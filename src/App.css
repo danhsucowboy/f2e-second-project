@@ -1,38 +1,245 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+:root{
+  --main-bg-color: #E2E2E2
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+*{
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  background: none;
+  border: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+*:focus {
+  outline: none;
+}
+
+.App{
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--main-bg-color);
+}
+
+  .App .wrapper{
+    margin: 0 auto;
+    width: 59.17vw;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
   }
-}
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  .wrapper .play-ground{
+    width: 100%;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
   }
-  to {
-    transform: rotate(360deg);
+
+    .play-ground .cell-wrapper{
+      width: 100%;
+      height: 19.6%;
+      margin-top: 6.76%;
+      display: flex;
+    }
+
+      .cell-wrapper .open-cell{
+        flex-grow: 1;
+        height: 100%;
+        display: flex;
+        justify-content: space-between;
+      }
+
+      .cell-wrapper .icon-wrapper{
+        width: 10%;
+        height: 100%;
+      }
+      
+        .icon-wrapper .king-n-logo{
+          margin: 0 auto;
+          width: 76.3%;
+          height: 100%;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+        }
+
+          .king-n-logo .king{
+            width: 81.1%;
+            height: 41.38%;
+            background-image: url('../src/asset/king_happy.png');
+            background-repeat: no-repeat;
+            background-size: contain;
+          }
+
+          .king-n-logo .title{
+            width: 100%;
+            height: 11.72%;
+            margin-top: .1875em;
+            text-align: center;
+            font: normal normal bold 0.875em/1.0625em 'Lato', sans-serif;
+            letter-spacing: .0875em;
+            color: #222222;
+          }
+
+      .cell-wrapper .foundation{
+        flex-grow: 1;
+        height: 100%;
+        display: flex;
+        justify-content: space-between;
+      }
+
+        .foundation .base-bg{
+          background: #FCFCFC 0% 0% no-repeat padding-box;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+
+          .foundation .base-bg .mask-spade{
+            width: 36.8%;
+            height: 24%;
+            mask: url('../src/asset/S.png') no-repeat;
+            mask-size: 100% 100%;
+            background-color: var(--main-bg-color);
+          }
+
+          .foundation .base-bg .mask-heart{
+            width: 36.8%;
+            height: 24%;
+            mask: url('../src/asset/H.png') no-repeat;
+            mask-size: 100% 100%;
+            background-color: var(--main-bg-color);
+          }
+
+          .foundation .base-bg .mask-diamond{
+            width: 36.8%;
+            height: 24%;
+            mask: url('../src/asset/D.png') no-repeat;
+            mask-size: 100% 100%;
+            background-color: var(--main-bg-color);
+          }
+
+          .foundation .base-bg .mask-club{
+            width: 36.8%;
+            height: 24%;
+            mask: url('../src/asset/C.png') no-repeat;
+            mask-size: 100% 100%;
+            background-color: var(--main-bg-color);
+          }
+
+      .cell-wrapper .cell{
+        width: 21.8%;
+        height: 100%;
+        border: 2px solid #FCFCFC;
+        border-radius: 5px;
+        opacity: 0.6;
+      }  
+
+    .play-ground  .card-table{
+      flex-grow: 1;
+      width: 100%;
+    }
+
+      .card-table .drag-section{
+        margin-top: 3.75%;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0em 1.55%;
+        justify-content: space-between;
+        align-content: flex-start;
+      }
+
+        .card-table .drag-section .box{
+          width: 10.16%;
+          height: 4.854%;
+        }
+
+          .drag-section .box .card{
+            position: absolute;
+            width: 7.215em;
+            height: 10.854em;
+            background-image: url('../src/asset/cards_background/C1.png');
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            cursor: pointer;
+          }
+
+
+  .wrapper .control-panel{
+    width: 100%;
+    height: 7.5%;
+    border-top: 1px solid #00000022;
+    display: flex;
+    /* justify-content: space-between; */
   }
-}
+
+    .control-panel .board{
+      flex-grow:1;
+      height: 100%;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+    }
+
+      .board .show-rule{
+        width: 9.14%;
+        height: 66.67%;
+        border: 2px solid #222222;
+        border-radius: 50%;
+        margin-left: 2.285%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+        .show-rule .spade{
+          /* width: 50%; */
+          height: 50%;
+          aspect-ratio: 1/1;
+          mask: url('../src/asset/S.png') no-repeat;
+          mask-size: 100% 100%;
+          background-color: #222222;
+        }
+
+      .board .board-text{
+        text-align: left;
+        font: normal normal bold 0.875em/1.0625em Lato;
+        letter-spacing: .0875em;
+        color: #222222;
+      }
+
+      .board .timer{
+        width: 20.565%;
+        height: 28.33%;
+        margin-left: 4.57%;
+      }
+
+      .board .score{
+        width: 15.995%;
+        height: 28.33%;
+      }
+
+    .control-panel .buttons{
+      width: 54.124%;
+      height: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+      .buttons .main-control{
+        width: 22.86%;
+        height: 66.67%;
+        background: #222222 0% 0% no-repeat padding-box;
+        border-radius: 3.125em;
+        text-align: center;
+        font: normal normal 900 .75em/.9375em 'Lato', sans-serif;
+        letter-spacing: .075em;
+        color: #FFFFFF;
+        cursor: pointer;
+      }
