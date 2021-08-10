@@ -1,6 +1,8 @@
-# Getting Started with Create React App
+# FreeCell-f2e-second-project
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A practice project from second level of Taiwan's f2e challenge
+
+It is a FreeCell web application, design by [UI designer "Daphne"](https://challenge.thef2e.com/user/2104?schedule=2826#works-2826), layout design shows on [here](https://xd.adobe.com/spec/015b4cc9-fe42-4a7d-6af7-4987fe514d46-776a/screen/dcf6e1e7-0c41-4cf9-9fc3-70a25949b919/) by Adobe XD
 
 ## Available Scripts
 
