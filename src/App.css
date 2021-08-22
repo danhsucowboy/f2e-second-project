@@ -10,6 +10,7 @@
   text-decoration: none;
   background: none;
   border: none;
+  background-color: var(--main-bg-color);
 }
 
 *:focus {
@@ -17,15 +18,18 @@
 }
 
 .App{
-  width: 100vw;
+  margin: 0 auto;
+  width: 93.75vw;;
   height: 100vh;
-  background-color: var(--main-bg-color);
+  /* background-color: var(--main-bg-color); */
 }
 
   .App .wrapper{
     margin: 0 auto;
-    width: 59.17vw;
+    /* width: 93.75vw; */
+    width: 80.83%;
     height: 100%;
+    /* aspect-ratio: 1.5/1; */
     display: flex;
     flex-direction: column;
   }
@@ -39,20 +43,23 @@
 
     .play-ground .cell-wrapper{
       width: 100%;
-      height: 19.6%;
-      margin-top: 6.76%;
+      aspect-ratio: 970/145;
+      margin-top: 4.2vw;
       display: flex;
     }
 
       .cell-wrapper .open-cell{
-        flex-grow: 1;
+        /* flex-grow: 1; */
+        width: 43.81%;
         height: 100%;
-        display: flex;
-        justify-content: space-between;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: .9375em;
       }
 
       .cell-wrapper .icon-wrapper{
-        width: 10%;
+        /* width: 10%; */
+        flex-grow: 1;
         height: 100%;
       }
       
@@ -67,7 +74,8 @@
         }
 
           .king-n-logo .king{
-            width: 81.1%;
+            margin: 0 auto;
+            width: 4.6875vw;
             height: 41.38%;
             background-image: url('../src/asset/king_happy.png');
             background-repeat: no-repeat;
@@ -85,10 +93,12 @@
           }
 
       .cell-wrapper .foundation{
-        flex-grow: 1;
+        /* flex-grow: 1; */
+        width: 43.81%;
         height: 100%;
-        display: flex;
-        justify-content: space-between;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: .9375em;
       }
 
         .foundation .base-bg{
@@ -155,14 +165,14 @@
       }
 
         .card-table .drag-section .box{
-          width: 10.16%;
+          width: 9.79%;
           height: 4.854%;
         }
 
           .drag-section .box .card{
             position: absolute;
-            width: 7.215em;
-            height: 10.854em;
+            width: 5.9375rem;
+            aspect-ratio: 95/145;
             background-image: url('../src/asset/cards_background/C1.png');
             background-repeat: no-repeat;
             background-size: 100% 100%;
@@ -187,8 +197,9 @@
     }
 
       .board .show-rule{
-        width: 9.14%;
+        /* width: 9.14%; */
         height: 66.67%;
+        aspect-ratio: 1/1;
         border: 2px solid #222222;
         border-radius: 50%;
         margin-left: 2.285%;

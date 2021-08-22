@@ -1,5 +1,6 @@
 import React from 'react';
 import logo from './logo.svg';
+import Cell from './Cell'
 import './App.css';
 
 function App() {
@@ -9,10 +10,10 @@ function App() {
         <div className="play-ground">
           <div className="cell-wrapper">
             <div className="open-cell">
-              <div className="cell"></div>
-              <div className="cell"></div>
-              <div className="cell"></div>
-              <div className="cell"></div>
+              <Cell/>
+              <Cell/>
+              <Cell/>
+              <Cell/>
             </div>
             <div className="icon-wrapper">
               <div className="king-n-logo">
@@ -23,18 +24,10 @@ function App() {
               </div>
             </div>
             <div className="foundation">
-              <div className="cell base-bg">
-                <div className="mask-spade"></div> 
-              </div>
-              <div className="cell base-bg">
-                <div className="mask-heart"></div>
-              </div>
-              <div className="cell base-bg">
-                <div className="mask-diamond"></div>
-              </div>
-              <div className="cell base-bg">
-                <div className="mask-club"></div>
-              </div>
+              <Cell bg="base-bg" mask="mask-spade"/>
+              <Cell bg="base-bg" mask="mask-heart"/>
+              <Cell bg="base-bg" mask="mask-diamond"/>
+              <Cell bg="base-bg" mask="mask-club"/>
             </div>
           </div>
           <div className="card-table">
