@@ -1,9 +1,11 @@
-import React from 'react';
-import logo from './logo.svg';
-import Cell from './Cell'
-import './App.css';
+import React, { useState } from 'react';
+import Cell from './component/Cell'
+import Card from './component/Card'
+import './style/App.css';
+import cardSuits from './component/Cards/cards-suit';
 
 function App() {
+  // const[cardSuits, setCardSuits] = useState(() => []);
   return (
     <div className="App">
       <div className="wrapper">
@@ -17,9 +19,7 @@ function App() {
             </div>
             <div className="icon-wrapper">
               <div className="king-n-logo">
-                <div className="king">
-                  {/* <img src="king_happy.png" alt="king-head" /> */}
-                </div>
+                <div className="king"></div>
                 <p className="title">FREECELL</p>
               </div>
             </div>
@@ -32,54 +32,11 @@ function App() {
           </div>
           <div className="card-table">
             <div className="drag-section">
-              <div className="box">
-                <div className="card"></div>
-              </div>
-              <div className="box">
-                <div className="card"></div>
-              </div>
-              <div className="box">
-                <div className="card"></div>
-              </div>
-              <div className="box">
-                <div className="card"></div>
-              </div>
-              <div className="box">
-                <div className="card"></div>
-              </div>
-              <div className="box">
-                <div className="card"></div>
-              </div>
-              <div className="box">
-                <div className="card"></div>
-              </div>
-              <div className="box">
-                <div className="card"></div>
-              </div>
-              <div className="box">
-                <div className="card"></div>
-              </div>
-              <div className="box">
-                <div className="card"></div>
-              </div>
-              <div className="box">
-                <div className="card"></div>
-              </div>
-              <div className="box">
-                <div className="card"></div>
-              </div>
-              <div className="box">
-                <div className="card"></div>
-              </div>
-              <div className="box">
-                <div className="card"></div>
-              </div>
-              <div className="box">
-                <div className="card"></div>
-              </div>
-              <div className="box">
-                <div className="card"></div>
-              </div>
+                {cardSuits.map((c) => {
+                  return (
+                    <Card picAddress={c}/>
+                  );
+                })}
             </div>
           </div>
         </div>

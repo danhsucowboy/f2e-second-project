@@ -77,7 +77,7 @@
             margin: 0 auto;
             width: 4.6875vw;
             height: 41.38%;
-            background-image: url('../src/asset/king_happy.png');
+            background-image: url('../asset/king_happy.png');
             background-repeat: no-repeat;
             background-size: contain;
           }
@@ -111,7 +111,7 @@
           .foundation .base-bg .mask-spade{
             width: 36.8%;
             height: 24%;
-            mask: url('../src/asset/S.png') no-repeat;
+            mask: url('../asset/S.png') no-repeat;
             mask-size: 100% 100%;
             background-color: var(--main-bg-color);
           }
@@ -119,7 +119,7 @@
           .foundation .base-bg .mask-heart{
             width: 36.8%;
             height: 24%;
-            mask: url('../src/asset/H.png') no-repeat;
+            mask: url('../asset/H.png') no-repeat;
             mask-size: 100% 100%;
             background-color: var(--main-bg-color);
           }
@@ -127,7 +127,7 @@
           .foundation .base-bg .mask-diamond{
             width: 36.8%;
             height: 24%;
-            mask: url('../src/asset/D.png') no-repeat;
+            mask: url('../asset/D.png') no-repeat;
             mask-size: 100% 100%;
             background-color: var(--main-bg-color);
           }
@@ -135,18 +135,10 @@
           .foundation .base-bg .mask-club{
             width: 36.8%;
             height: 24%;
-            mask: url('../src/asset/C.png') no-repeat;
+            mask: url('../asset/C.png') no-repeat;
             mask-size: 100% 100%;
             background-color: var(--main-bg-color);
           }
-
-      .cell-wrapper .cell{
-        width: 21.8%;
-        height: 100%;
-        border: 2px solid #FCFCFC;
-        border-radius: 5px;
-        opacity: 0.6;
-      }  
 
     .play-ground  .card-table{
       flex-grow: 1;
@@ -159,8 +151,8 @@
         height: 100%;
         display: flex;
         flex-wrap: wrap;
-        gap: 0em 1.55%;
-        justify-content: space-between;
+        gap: 0em 3.092%;
+        /* justify-content: space-between; */
         align-content: flex-start;
       }
 
@@ -173,7 +165,7 @@
             position: absolute;
             width: 5.9375rem;
             aspect-ratio: 95/145;
-            background-image: url('../src/asset/cards_background/C1.png');
+            background-image: url('../asset/cards_background/C1.png');
             background-repeat: no-repeat;
             background-size: 100% 100%;
             cursor: pointer;
@@ -212,7 +204,7 @@
           /* width: 50%; */
           height: 50%;
           aspect-ratio: 1/1;
-          mask: url('../src/asset/S.png') no-repeat;
+          mask: url('../asset/S.png') no-repeat;
           mask-size: 100% 100%;
           background-color: #222222;
         }
@@ -254,3 +246,5 @@
         color: #FFFFFF;
         cursor: pointer;
       }
+
+      
